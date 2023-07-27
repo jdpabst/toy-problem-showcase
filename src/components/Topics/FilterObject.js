@@ -34,13 +34,12 @@ class FilterObject extends Component {
     }
 
     solution(){
-        let arr = this.state.cats;
-        let userKey = this.state.userInput;
+        const { cats, userInput } = this.state
         let answer = [];
 
-        for(var i = 0; i < arr.length; i++){
-            if(arr[i][userKey]){
-                answer.push(arr[i]);
+        for(var i = 0; i < cats.length; i++){
+            if(cats[i][userInput]){
+                answer.push(cats[i]);
             }
         }
 
